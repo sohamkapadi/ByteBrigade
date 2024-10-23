@@ -4,9 +4,9 @@ import { User } from "../models/userSchema.js";
 import { sendToken } from "../utils/jwtToken.js";
 
 export const register=catchAsyncError(async(req,res,next)=>{
-    const {name,email,phone,password}=req.body;
+    const {name,email,phone,password,riskProfile}=req.body;
 
-    if(!name || !email || !phone || !password){
+    if(!name || !email || !phone || !password || !riskProfile){
         return next(new ErrorHandler('Please fill in all fields',400))
     }
 
@@ -21,6 +21,7 @@ export const register=catchAsyncError(async(req,res,next)=>{
         email:email,
         phone:phone,
         password:password,
+        riskProfile:riskProfile,
     });
 
     sendToken(user,200,res,"User Registered Successfully!");
