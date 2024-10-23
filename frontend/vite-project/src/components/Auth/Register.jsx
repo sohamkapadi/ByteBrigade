@@ -13,6 +13,7 @@ const Register=()=>{
     const [password,setPassword]=useState("");
     const [phone,setPhone]=useState("");
     const [name,setName]=useState("");
+    const [riskProfile,setRiskProfile]=useState("");
 
     const {isAuthorized,setIsAuthorized,user,setUser}=useContext(Context);
 
@@ -21,7 +22,7 @@ const Register=()=>{
         try {
             const {data}=await axios.post(
                 "http://localhost:3000/api/v1/user/register",
-                {name,email,password,phone},
+                {name,email,password,phone,riskProfile},
                 {withCredentials:true,
                 headers:{
                     "Content-Type":"application/json",
@@ -32,6 +33,7 @@ const Register=()=>{
             setEmail("");
             setPhone("");
             setPassword("");
+            setRiskProfile("");
             setIsAuthorized(true);
         } catch (error) {
             toast.error(error.response.data.message);
@@ -51,6 +53,18 @@ const Register=()=>{
                         <h3>Create a new Account</h3>
                     </div>
                     <form>
+                    <div className="inputTag">
+                            <label>Register As</label>
+                            <div>
+                                <select value={riskProfile} onChange={(e)=> setRiskProfile(e.target.value)}>
+                                    <option value="">Select Risk Profile</option>
+                                    <option value="Low Risk">Low Risk</option>
+                                    <option value="Moderate Risk">Moderate Risk</option>
+                                    <option value="High Risk">High Risk</option>
+                                </select>
+                                <FaRegUser />
+                            </div>
+                        </div>
                         <div className="inputTag">
                             <div>
                                 <input type="text" value={name} onChange={(e)=>setName(e.target.value)} placeholder="Name"/>
