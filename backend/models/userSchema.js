@@ -19,6 +19,11 @@ const userSchema=new mongoose.Schema({
         type: Number,
         required: [true, "Please provide your phone number!"],
     },
+    riskProfile: {
+        type: String,
+        required:[true, "Please provide your riskProfile !"],
+        enum: ["Low Risk", "Moderate Risk", "High Risk"],
+    },
     password:{
         type:String,
         required:[true,"Please provide your password!"],
