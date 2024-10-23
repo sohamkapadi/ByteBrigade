@@ -1,0 +1,54 @@
+/* src/components/HeroSection.css */
+.heroSection {
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out text and image */
+}
+
+.text-section {
+    flex: 1; /* Allow the text section to take available space */
+    margin-right: 20px; /* Add space between text and image */
+}
+
+.image-section {
+    flex: 1; /* Allow the image section to take available space */
+}
+
+.image-section img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    margin-top: 20px; /* Add some space above the details */
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, and base width for responsiveness */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Make the card a flex container */
+    align-items: center; /* Center the content vertically */
+}
+
+.icon {
+    font-size: 24px; /* Size of the icon */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.content {
+    flex: 1; /* Allow content to take available space */
+}
+
+.content p {
+    margin: 0; /* Remove default margin */
+}

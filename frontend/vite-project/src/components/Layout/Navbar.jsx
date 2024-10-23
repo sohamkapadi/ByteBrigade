@@ -30,6 +30,15 @@ const Navbar=()=>{
                         <img src="" alt="logo"/>
                     </div>
                     <ul className={!show ? "menu" : "show-menu menu"} >
+                    <li>
+                            <Link to={"/"} onClick={()=> setShow(false)}>Home</Link>
+                        </li>
+                        <li>
+                            <Link to={"/education"} onClick={()=> setShow(false)}>EDUCATION</Link>
+                        </li>
+                        <li>
+                            <Link to={"/recommendations"} onClick={()=> setShow(false)}>RECOMMENDATIONS</Link>
+                        </li>
                         <button onClick={handleLogout}>LOGOUT</button>
                     </ul>
                     <div className="hamburger">

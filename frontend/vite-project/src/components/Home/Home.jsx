@@ -1,6 +1,10 @@
 import React, { useContext } from "react";
 import { Context } from "../../main";
 import { Navigate } from "react-router-dom";
+import HeroSection from "./HeroSection";
+import NewsSection from "./NewsSection";
+// import PopularCategories from "./PopularCategories";
+// import PopularCompanies from "./PopularCompanies";
 const Home=()=>{
     const {isAuthorized}=useContext(Context);
     if(!isAuthorized){
@@ -8,7 +12,10 @@ const Home=()=>{
     }
     return (
         <section className="homePage page">
-            <h1>Hello</h1>
+            <HeroSection />
+            <hr />
+            <NewsSection />
+            <hr />
         </section>
     )
 }

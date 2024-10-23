@@ -7,7 +7,9 @@ import Register from "./components/Auth/Register";
 import Navbar from "./components/Layout/Navbar";
 import Footer from "./components/Layout/Footer";
 import Home from "./components/Home/Home";
-import NotFound from "./components/NotFound/NotFound"
+import Education from "./components/Education/Education";
+import Recommendations from "./components/Recommendation/Recommendations";
+import NotFound from "./components/NotFound/NotFound";
 import axios from "axios";
 import {Toaster} from "react-hot-toast";
 
@@ -35,6 +37,8 @@ const App = () => {
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
         <Route path="/" element={<Home />}/>
+        <Route path="/education" element={<Education />}/>
+        <Route path="/recommendations" element={<Recommendations />}/>
         <Route path="*" element={<NotFound />}/>
       </Routes>
       <Footer />

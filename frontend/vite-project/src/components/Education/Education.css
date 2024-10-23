@@ -1,0 +1,102 @@
+/* src/styles/EducationPage.css */
+.education-page {
+    padding: 20px;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2rem; /* Reduced font size */
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    font-size: 1.25rem; /* Reduced font size */
+    margin-bottom: 30px;
+}
+
+.articles, .videos, .glossary, .recommended-resources {
+    margin-bottom: 40px;
+}
+
+.article-list, .video-list, .book-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.article-card, .video-card, .book-card, .glossary-card {
+    border: 1px solid #ccc;
+    padding: 10px; /* Reduced padding */
+    margin: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 30%; /* For articles and videos */
+}
+
+.video-card img, .book-card img {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+}
+
+.article-card:hover, .video-card:hover, .book-card:hover, .glossary-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns for glossary */
+    gap: 20px;
+    width: 100%; /* Ensure it takes the full width */
+}
+
+.glossary-card {
+    text-align: center; /* Center text */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%; /* Ensures the card takes the full width of its grid cell */
+}
+
+
+.glossary-icon {
+    font-size: 2rem; /* Icon size */
+    margin-bottom: 10px;
+}
+
+.book-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin: 20px 0; /* Space out horizontal lines */
+}
+
+.take-quiz-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 20px 0; /* Margin for spacing */
+    text-align: center;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+

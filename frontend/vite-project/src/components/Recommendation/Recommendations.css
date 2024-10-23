@@ -1,0 +1,29 @@
+.stock-recommendations-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card {
+    flex: 1;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h3 {
+    margin: 0 0 10px;
+  }
+  
+  .card p {
+    margin: 0;
+  }
+  
