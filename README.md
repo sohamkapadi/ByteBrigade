@@ -67,41 +67,6 @@ npm run dev
 
 This command will launch the app in your default web browser at http://localhost:3000.
 
-## Folder Structure
-investment-recommendations-app/
-│
-├── public/
-│   ├── index.html
-│   └── favicon.ico
-│
-├── src/
-│   ├── components/
-│   │   ├── Chatbot.js
-│   │   ├── Recommendations.js
-│   │   ├── Quiz.js
-│   │   ├── News.js
-│   │   ├── DataVisualization.js
-│   │   └── EducationalResources.js
-│   ├── App.js
-│   ├── index.js
-│   └── styles/
-│       ├── Recommendations.css
-│       ├── Chatbot.css
-│       ├── Quiz.css
-│       ├── News.css
-│       ├── DataVisualization.css
-│       └── EducationalResources.css
-│
-├── backend/
-│   ├── controllers/
-│   ├── services/
-│   ├── routes/
-│   ├── app.js
-│   └── package.json
-│
-├── package.json
-└── README.md
-
 ## Usage
 Open the app in your browser.
 Select a risk profile from the dropdown at the top of the page to view stock recommendations.
