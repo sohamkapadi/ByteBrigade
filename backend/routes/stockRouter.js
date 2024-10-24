@@ -3,6 +3,6 @@ import { getStockRecommendations } from '../controllers/stockController.js';
 
 const router = express.Router();
 
-router.get('/recommendations', getStockRecommendations);
+router.post('/recommendations', getStockRecommendations);
 
 export default router;

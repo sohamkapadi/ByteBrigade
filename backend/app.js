@@ -9,6 +9,7 @@ import newsRouter from "./routes/newsRouter.js";
 import quizRouter from "./routes/quizRouter.js";
 import stockRouter from "./routes/stockRouter.js";
 import financeRouter from "./routes/financeRouter.js";
+import chatRouter from "./routes/chatRouter.js";
 
 const app=express();
 dotenv.config({path: "./config/config.env"});
@@ -28,6 +29,7 @@ app.use("/api/v1/user", userRouter);
 app.use('/api/v1/quiz', quizRouter);
 app.use('/api/vi/finance', financeRouter);
 app.use('/api/v1/finance', stockRouter);
+app.use('/api/v1/chatbot', chatRouter);
 
 dbConnection();
 

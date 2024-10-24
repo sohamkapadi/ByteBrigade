@@ -27,17 +27,23 @@ const Navbar=()=>{
             <nav className={isAuthorized ? "navbarShow" : "navbarHide"}>
                 <div className="container">
                     <div className="logo">
-                        <img src="" alt="logo"/>
+                        <img src="./logo.png" alt="logo"/>
                     </div>
                     <ul className={!show ? "menu" : "show-menu menu"} >
                     <li>
-                            <Link to={"/"} onClick={()=> setShow(false)}>Home</Link>
+                            <Link to={"/"} onClick={()=> setShow(false)}>HOME</Link>
                         </li>
                         <li>
                             <Link to={"/education"} onClick={()=> setShow(false)}>EDUCATION</Link>
                         </li>
                         <li>
                             <Link to={"/recommendations"} onClick={()=> setShow(false)}>RECOMMENDATIONS</Link>
+                        </li>
+                        <li>
+                            <Link to={"/charts"} onClick={()=> setShow(false)}>VISUALIZATION</Link>
+                        </li>
+                        <li>
+                            <Link to={"/chatbot"} onClick={()=> setShow(false)}>CHATBOT</Link>
                         </li>
                         <button onClick={handleLogout}>LOGOUT</button>
                     </ul>

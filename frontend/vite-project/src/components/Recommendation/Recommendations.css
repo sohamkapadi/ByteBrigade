@@ -1,29 +1,46 @@
-.stock-recommendations-container {
-    max-width: 800px;
-    margin: 20px auto;
+.recommendations-container {
+    width: 100%;
     padding: 20px;
-  }
-  
-  .card-container {
+    background-color: #f5f5f5; /* Light background for contrast */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.recommendations-content {
     display: flex;
-    justify-content: space-between;
-  }
-  
-  .card {
-    flex: 1;
-    margin: 10px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card h3 {
-    margin: 0 0 10px;
-  }
-  
-  .card p {
-    margin: 0;
-  }
-  
+    flex-wrap: wrap; /* Allows cards to wrap to the next line if the screen is narrow */
+    justify-content: space-between; /* Space out the cards evenly */
+}
+
+.recommendation-card {
+    background-color: #fff; /* White background for cards */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 15px; /* Space inside the card */
+    margin: 10px; /* Space between cards */
+    flex: 1 1 calc(30% - 20px); /* Each card takes up about 30% of the width with space for margins */
+    min-width: 250px; /* Minimum width for smaller screens */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.recommendation-card:hover {
+    transform: scale(1.03); /* Slightly enlarge on hover */
+}
+
+.recommendation-card h3 {
+    margin-top: 0; /* Remove default margin from the top */
+    font-family: 'Arial', sans-serif;
+    color: #007bff; /* Bootstrap primary color */
+}
+
+.recommendation-card p {
+    color: #555; /* Darker gray for summary text */
+    line-height: 1.5; /* Improve readability */
+}

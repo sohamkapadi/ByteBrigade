@@ -2,7 +2,7 @@ import  OpenAI from "openai";
 import stockData from '../data/stocks.json' assert {type :'json'}; // Import the stock data
 
 const configuration = new OpenAI({
-  apiKey: "sk-Yyh7kS-14_oBNV5e80zl01ciIHqcPb92IFmVs9uy-9T3BlbkFJ2AgGKZp3P7Pyt1LZuB4_ohoN09T3lO2QN39UbOUlsA",
+  apiKey: `${process.env.OPENAI_API_KEY}`,
 });
 const openai = new OpenAI(configuration);
 
@@ -51,13 +51,17 @@ export const generateStockRecommendations = async (userProfile) => {
         role: "system",
         content: `The user "${userProfile.name}" has a "${userProfile.riskProfile}" risk profile for stock investments.Below is the financial data for 10 companies: ${JSON.stringify(stockData, null, 2)}`
       },
+    //   {
+    //     role : "system",
+    //     content:`Give output in strictly JSON object format with stock and summary as parameter in the format.  `
+    //    },
       {
-        role:"system",
-        content:" Based on this financial data and the user's risk profile, recommend the name of top 3 stocks for investment. Give short Sumamary about Balance sheet and income statements helping users understand the financial health of companies"
-      },
-      {
-       role : "system",
-       content:"Give Output in JSON format with stock and summary as parameter"
+        role:"user",
+        content:` Based on this financial data and the user's risk profile, recommend the name of top 3 stocks for investment. Give 1 line summary for each stock about Balance sheet and income statements helping users understand the financial health of companies in the following format:
+        Company 1:
+        Name: Company Name
+        Summary: Summary of Balance sheet and Income statement
+        Repeat for 3 companies with each company and summary on a new line and not a JSON format output, using the same format for each.`
       }
     ];
 

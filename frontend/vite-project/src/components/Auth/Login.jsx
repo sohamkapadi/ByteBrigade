@@ -43,7 +43,7 @@ const Login=()=>{
             <div className="authPage">
                 <div className="container">
                     <div className="header">
-                        <img src="/WorkByte_logo_black_1.png" alt="logo" />
+                        <img src="/logo.png" alt="logo" />
                         <h3>Log in to your account</h3>
                     </div>
                     <form>

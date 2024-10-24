@@ -3,7 +3,7 @@ import QuizQuestion from '../models/quizModel.js';
 
 // Configure OpenAI directly with the API key
 const openai = new OpenAI({
-  apiKey: "sk-Yyh7kS-14_oBNV5e80zl01ciIHqcPb92IFmVs9uy-9T3BlbkFJ2AgGKZp3P7Pyt1LZuB4_ohoN09T3lO2QN39UbOUlsA", // Replace with your actual OpenAI API key
+  apiKey: `${process.env.OPENAI_API_KEY}`, // Replace with your actual OpenAI API key
 });
 
 // Controller to handle generating quiz questions

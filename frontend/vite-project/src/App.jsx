@@ -9,6 +9,8 @@ import Footer from "./components/Layout/Footer";
 import Home from "./components/Home/Home";
 import Education from "./components/Education/Education";
 import Recommendations from "./components/Recommendation/Recommendations";
+import Charts from "./components/Charts/charts";
+import Chatbot from "./components/Chatbot/Chatbot";
 import NotFound from "./components/NotFound/NotFound";
 import axios from "axios";
 import {Toaster} from "react-hot-toast";
@@ -39,6 +41,8 @@ const App = () => {
         <Route path="/" element={<Home />}/>
         <Route path="/education" element={<Education />}/>
         <Route path="/recommendations" element={<Recommendations />}/>
+        <Route path="/charts" element={<Charts />}/>
+        <Route path="/chatbot" element={<Chatbot />}/>
         <Route path="*" element={<NotFound />}/>
       </Routes>
       <Footer />

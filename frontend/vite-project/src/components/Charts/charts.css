@@ -1,0 +1,27 @@
+.charts-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  select {
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .charts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .chart {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }

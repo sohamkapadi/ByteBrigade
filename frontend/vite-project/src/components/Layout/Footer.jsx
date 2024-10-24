@@ -8,7 +8,7 @@ const Footer=()=>{
     const {isAuthorized}=useContext(Context);
     return (
         <footer className={isAuthorized ? "footerShow" : "footerHide"}>
-            <div>&copy; All Rights Reserved By Soham.</div>
+            <div>&copy; All Rights Reserved By ByteBrigade.</div>
             <div>
                 <Link to={"https://about.meta.com/technologies/facebook-app/"} target="_blank"><FaFacebookF /></Link>
                 <Link to={"https://www.youtube.com"} target="_blank"><FaYoutube /></Link>
