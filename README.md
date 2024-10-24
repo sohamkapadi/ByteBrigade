@@ -1,4 +1,4 @@
-# Investment Recommendations App
+# InvestApp
 
 ## Overview
 
